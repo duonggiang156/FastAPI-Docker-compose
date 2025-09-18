@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: fastapi-demo
+    ports:
+      - "6688:6688"
+    # optional: tự restart nếu lỗi
+    restart: unless-stopped
+
